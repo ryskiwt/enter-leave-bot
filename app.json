@@ -1,6 +1,10 @@
 {
-  "name": "discordpy-startup",
-  "description": "Herokuでdiscord.pyを始めるテンプレート",
-  "repository": "https://github.com/DiscordBotPortalJP/discordpy-startup",
-  "keywords": ["python", "discord", "bot"]
+  "name": "enter-leave-bot",
+  "description": "Discordのボイスチャンネルの入退室を見張ってSlackに通知するボット",
+  "repository": "https://github.com/ryskiwt/enter-leave-bot",
+  "keywords": [
+    "python",
+    "discord",
+    "bot"
+  ]
 }
