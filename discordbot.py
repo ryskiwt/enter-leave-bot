@@ -31,8 +31,7 @@ async def on_voice_state_update(member, before, after):
         if after.channel is not None and after.channel.id == channel_id:
             msg = (
                 f"Discordの「{after.channel.name}」チャンネルに、 {member.name} が入室しました。\n\n"
-                "現在の参加者:\n  "
-                + "\n  ".join([m.name for m in after.channel.members])
+                "現在の参加者:\n  " + "\n  ".join([m.name for m in after.channel.members])
             )
             post_to_slack(msg)
 
@@ -40,8 +39,7 @@ async def on_voice_state_update(member, before, after):
         if before.channel is not None and before.channel.id == channel_id:
             msg = (
                 f"Discordの「{before.channel.name}」チャンネルから、 {member.name} が退室しました。\n\n"
-                "現在の参加者:\n  "
-                + "\n  ".join([m.name for m in before.channel.members])
+                "現在の参加者:\n  " + "\n  ".join([m.name for m in before.channel.members])
             )
             post_to_slack(msg)
 
