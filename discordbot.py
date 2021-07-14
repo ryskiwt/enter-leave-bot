@@ -30,7 +30,7 @@ async def on_voice_state_update(member, before, after):
         # 入室
         if after.channel is not None and after.channel.id == channel_id:
             msg = (
-                f"{after.channel.name} に、 {member.name} が入室しました。\n\n"
+                f"Discordの「{after.channel.name}」チャンネルに、 {member.name} が入室しました。\n\n"
                 "現在の参加者:\n  "
                 + "\n  ".join([m.name for m in after.channel.members])
             )
@@ -39,7 +39,7 @@ async def on_voice_state_update(member, before, after):
         # 退室
         if before.channel is not None and before.channel.id == channel_id:
             msg = (
-                f"{before.channel.name} から、 {member.name} が退室しました。\n\n"
+                f"Discordの「{before.channel.name}」チャンネルから、 {member.name} が退室しました。\n\n"
                 "現在の参加者:\n  "
                 + "\n  ".join([m.name for m in before.channel.members])
             )
